@@ -1,21 +1,39 @@
-# First, uninstall the current tailwindcss package
-npm uninstall tailwindcss
+{
+  "name": "materialfinder",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.0",
+    "apexcharts": "^3.45.1",
+    "react-apexcharts": "^1.4.1",
+    "@mui/material": "^5.15.7",
+    "@mui/icons-material": "^5.15.7",
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "papaparse": "^5.4.1",
+    "framer-motion": "^11.0.3",
+    "tailwindcss": "^3.4.1",
+    "postcss": "^8.4.33",
+    "autoprefixer": "^10.4.17"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.55.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "vite": "^5.0.8"
+  }
+}
 
-# Install the correct packages
-npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
-
-# Initialize Tailwind CSS (creates tailwind.config.js)
-npx tailwindcss init -p
-
-# If the error persists, try installing the PostCSS plugin explicitly
-npm install -D @tailwindcss/postcss7-compat
-
-# If you're using an older version of PostCSS, you might need
-npm install -D postcss@^8.0.0
-
-# In case of dependency conflicts, use
-npm install --legacy-peer-deps
-
-# If needed, clear npm cache and reinstall
-npm cache clean --force
-npm install
