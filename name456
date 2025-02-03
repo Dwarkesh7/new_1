@@ -1,0 +1,21 @@
+# First, uninstall the current tailwindcss package
+npm uninstall tailwindcss
+
+# Install the correct packages
+npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
+
+# Initialize Tailwind CSS (creates tailwind.config.js)
+npx tailwindcss init -p
+
+# If the error persists, try installing the PostCSS plugin explicitly
+npm install -D @tailwindcss/postcss7-compat
+
+# If you're using an older version of PostCSS, you might need
+npm install -D postcss@^8.0.0
+
+# In case of dependency conflicts, use
+npm install --legacy-peer-deps
+
+# If needed, clear npm cache and reinstall
+npm cache clean --force
+npm install
